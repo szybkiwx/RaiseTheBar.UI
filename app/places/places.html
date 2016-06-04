@@ -1,0 +1,15 @@
+<h1>List of places</h1>
+<div id="list">
+  <ul>
+    <li ng-repeat="place in places">
+        <a href="#!/placedetails/{{place.ID}}"> {{place.Value.Name}} </a>
+        <span>{{place.Value.Address}}</span>
+        <span>Rating: {{place.Value.Rating}}</span>
+    </li>
+  </ul>
+</div>
+<div id="map"></div>
+
+ <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+      <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+ </div>
